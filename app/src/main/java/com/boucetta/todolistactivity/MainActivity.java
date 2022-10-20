@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
         adTaskbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String task = editTextTask.getText().toString();
-                String delay = editTextDelay.getText().toString();
+                String task = editTextTask.getText().toString().replace("'"," ");
+                String delay = editTextDelay.getText().toString().replace("'"," ");
 
                 if (editTextDelay.getText().toString().isEmpty() && editTextDelay.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please gives the task and the delay",
